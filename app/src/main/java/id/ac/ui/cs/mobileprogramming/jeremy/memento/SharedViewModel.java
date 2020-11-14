@@ -4,13 +4,13 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class SharedViewModel extends ViewModel{
-    private MutableLiveData<Profile> selected = new MutableLiveData<>();
+    private MutableLiveData<Profiles> selected = new MutableLiveData<>();
 
-    public void setSelected(Profile profile) {
+    public void setSelected(Profiles profile) {
         selected.setValue(profile);
     }
 
-    public MutableLiveData<Profile> getSelected() {
+    public MutableLiveData<Profiles> getSelected() {
         return selected;
     }
 }

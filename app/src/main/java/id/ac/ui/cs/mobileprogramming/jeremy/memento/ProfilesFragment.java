@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.room.Room;
+
 import id.ac.ui.cs.mobileprogramming.jeremy.memento.databinding.FragmentProfilesBinding;
 
 
@@ -22,6 +24,8 @@ import java.util.List;
 public class ProfilesFragment extends Fragment {
 
     private FragmentProfilesBinding binding;
+    private AppDatabase db;
+
     private ProfilesDetail detailsFragment = new ProfilesDetail();
 
     public ProfilesFragment() {
@@ -40,12 +44,27 @@ public class ProfilesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        List<Profile> profileList = new ArrayList<>();
-        profileList.add(new Profile( "Rafli Hidayat", "aphy", "0855555555","12 july 9999", "asjfbqigiqw",R.drawable.template));
+
+        db = Room.databaseBuilder(getActivity().getApplicationContext(),
+                AppDatabase.class, "profiledb").build();
+
+        Profiles nasya = new Profiles();
+        nasya.setNamaProfile("nasya oris");
+        nasya.setNickNameProfile("nasya");
+        nasya.setPhoneProfile("0855555555");
+        nasya.setBirthdayProfile("12 july 9999");
+        nasya.setAddressProfile("asjfbqigiqw");
+        nasya.setImg(R.drawable.template);
+
+        db.profileDao().insertProfile(nasya);
+
+        List<Profiles> profiles = db.profileDao().selectAllProfiles();
 
 
 
-        ProfilesAdapter adapter = new ProfilesAdapter(profileList);
+        ProfilesAdapter adapter = new ProfilesAdapter(profiles);
+
+
         binding.recyclerView.setAdapter(adapter);
         adapter.setListener((v, position) -> {
             viewModel.setSelected(adapter.getProfileAt(position));

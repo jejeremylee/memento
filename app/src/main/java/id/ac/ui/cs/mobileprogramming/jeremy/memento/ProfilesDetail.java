@@ -34,11 +34,11 @@ public class ProfilesDetail extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         viewModel.getSelected().observe(getViewLifecycleOwner(), item -> {
-            binding.name.setText(item.getName());
-            binding.nickname.setText(item.getNickName());
-            binding.phone.setText(item.getPhone());
-            binding.birthday.setText(item.getBirthday());
-            binding.address.setText(item.getAddress());
+            binding.name.setText(item.getNamaProfile());
+            binding.nickname.setText(item.getNickNameProfile());
+            binding.phone.setText(item.getPhoneProfile());
+            binding.birthday.setText(item.getBirthdayProfile());
+            binding.address.setText(item.getAddressProfile());
             binding.image.setImageResource(item.getImg());
         });
     }

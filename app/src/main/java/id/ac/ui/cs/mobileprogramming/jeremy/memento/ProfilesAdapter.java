@@ -12,14 +12,14 @@ import id.ac.ui.cs.mobileprogramming.jeremy.memento.databinding.ProfileRowBindin
 import java.util.List;
 
 public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHolder> {
-    private List<Profile> list;
+    private List<Profiles> list;
     private OnItemClickListener listener;
 
     public interface OnItemClickListener {
         void onClick(View view, int position);
     }
 
-    public ProfilesAdapter(List<Profile> list) {
+    public ProfilesAdapter(List<Profiles> list) {
         this.list = list;
     }
 
@@ -27,7 +27,7 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHo
         this.listener = listener;
     }
 
-    public Profile getProfileAt(int position) {
+    public Profiles getProfileAt(int position) {
         return list.get(position);
     }
 
@@ -41,8 +41,8 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.binding.name.setText(list.get(position).getName());
-        holder.binding.nickname.setText(list.get(position).getNickName());
+        holder.binding.name.setText(list.get(position).getNamaProfile());
+        holder.binding.nickname.setText(list.get(position).getNickNameProfile());
         holder.binding.image.setImageResource(list.get(position).getImg());
     }
 
