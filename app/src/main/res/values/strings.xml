@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">memento</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phoneText">Phone</string>
+    <string name="phone_template">081256789934</string>
+    <string name="birthdayText">Birthday</string>
+    <string name="birthday_template">DD-MM-YYYY</string>
+    <string name="addressText">Address</string>
+    <string name="address_template">
+       Jl. Kemurnian blok A12 No 3, Jakarta Pusat
+    </string>
+
+    <string name="name_template">John Doe</string>
+    <string name="nickname_template">John D</string>
+</resources>
