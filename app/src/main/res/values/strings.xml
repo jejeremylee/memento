@@ -10,6 +10,11 @@
        Jl. Kemurnian blok A12 No 3, Jakarta Pusat
     </string>
 
+    <string name="nameText">Name</string>
+    <string name="nicknameText">Nickname</string>
     <string name="name_template">John Doe</string>
     <string name="nickname_template">John D</string>
+
+    <string name="save">SAVE</string>
+
 </resources>

@@ -30,7 +30,16 @@ public class DatabaseInitializer {
                 nasya.setAddressProfile("Jl jalan ke sukabumi cakepp");
                 nasya.setImg(R.drawable.template);
 
+                Profiles dummy = new Profiles();
+                dummy.setNameProfile("dummy");
+                dummy.setNickNameProfile("dummy");
+                dummy.setPhoneProfile("0855555555");
+                dummy.setBirthdayProfile("12 july 9999");
+                dummy.setAddressProfile("Jl jalan ke sukabumi cakepp");
+                dummy.setImg(R.drawable.template);
+
                 database.profileDao().insertProfile(nasya);
+                database.profileDao().insertProfile(dummy);
             }
 
             return null;
