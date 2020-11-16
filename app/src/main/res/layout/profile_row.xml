@@ -13,7 +13,7 @@
         android:layout_height="200dp"
         android:contentDescription="@string/name_template"
         android:scaleType="fitXY"
-        android:layout_gravity="start"
+        android:layout_gravity="center"
         android:src="@drawable/template" />
 
     <TextView
@@ -21,10 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:gravity="start"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:text="@string/name_template"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -35,9 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:gravity="start"
+        android:gravity="center"
         android:layout_marginLeft="10dp"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:text="@string/nickname_template"
         android:textColor="@android:color/black"
         android:textSize="20sp" />

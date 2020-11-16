@@ -1,6 +1,7 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,8 @@ import id.ac.ui.cs.mobileprogramming.jeremy.memento.databinding.FragmentProfiles
 
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -28,7 +31,7 @@ public class ProfilesFragment extends Fragment {
     private FragmentProfilesBinding binding;
     List<Profiles> profiles;
     private ProfilesDetail detailsFragment = new ProfilesDetail();
-    //private SharedViewModel viewModel;
+
 
     public ProfilesFragment() {
     }
@@ -39,6 +42,11 @@ public class ProfilesFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profiles, container, false);
+        FloatingActionButton addButton = binding.getRoot().findViewById(R.id.addProfile);
+        addButton.bringToFront();
+        addButton.setOnClickListener(view -> {
+            startActivity(new Intent(getActivity().getApplicationContext(), AddProfileActivity.class));
+        });
         return binding.getRoot();
     }
 
@@ -46,9 +54,6 @@ public class ProfilesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-         //viewModel = new ViewModelProvider(this, new ViewModelProvider.AndroidViewModelFactory(getActivity().getApplication())).get(SharedViewModel.class);
-        //viewModel = ViewModelProviders.of(requireActivity()).get(SharedViewModel.class);
 
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
@@ -60,7 +65,7 @@ public class ProfilesFragment extends Fragment {
         }
         ProfilesAdapter adapter = new ProfilesAdapter(profiles);
 
-        Log.d("profile", adapter.getProfileAt(0).nameProfile);
+
         binding.recyclerView.setAdapter(adapter);
         adapter.setListener((v, position) -> {
             viewModel.setSelected(adapter.getProfileAt(position));

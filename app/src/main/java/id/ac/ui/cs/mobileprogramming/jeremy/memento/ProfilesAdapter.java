@@ -1,5 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,8 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.binding.name.setText(list.get(position).getNameProfile());
         holder.binding.nickname.setText(list.get(position).getNickNameProfile());
-        holder.binding.image.setImageResource(list.get(position).getImg());
+        //Log.d("HELLO",Integer.toString(list.get(position).getImg()));
+        //holder.binding.image.setImageResource(list.get(position).getImg());
     }
 
     @Override

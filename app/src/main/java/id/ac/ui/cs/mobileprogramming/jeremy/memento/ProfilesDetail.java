@@ -39,7 +39,7 @@ public class ProfilesDetail extends Fragment {
             binding.phone.setText(item.getPhoneProfile());
             binding.birthday.setText(item.getBirthdayProfile());
             binding.address.setText(item.getAddressProfile());
-            binding.image.setImageResource(item.getImg());
+//            binding.image.setImageResource(item.getImg());
         });
     }
 }
