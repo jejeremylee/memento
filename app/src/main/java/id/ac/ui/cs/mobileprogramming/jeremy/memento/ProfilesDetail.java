@@ -34,7 +34,7 @@ public class ProfilesDetail extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         viewModel.getSelected().observe(getViewLifecycleOwner(), item -> {
-            binding.name.setText(item.getNamaProfile());
+            binding.name.setText(item.getNameProfile());
             binding.nickname.setText(item.getNickNameProfile());
             binding.phone.setText(item.getPhoneProfile());
             binding.birthday.setText(item.getBirthdayProfile());

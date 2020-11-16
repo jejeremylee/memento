@@ -10,8 +10,8 @@ public class Profiles {
     @PrimaryKey(autoGenerate = true)
     public int profileId;
 
-    @ColumnInfo(name = "namaProfile")
-    public String namaProfile;
+    @ColumnInfo(name = "nameProfile")
+    public String nameProfile;
 
     @ColumnInfo(name = "nickNameProfile")
     public String nickNameProfile;
@@ -36,12 +36,12 @@ public class Profiles {
         this.profileId = profileId;
     }
 
-    public String getNamaProfile() {
-        return namaProfile;
+    public String getNameProfile() {
+        return nameProfile;
     }
 
-    public void setNamaProfile(String namaProfile) {
-        this.namaProfile = namaProfile;
+    public void setNameProfile(String nameProfile) {
+        this.nameProfile = nameProfile;
     }
 
     public String getPhoneProfile() {
@@ -55,14 +55,14 @@ public class Profiles {
     public String getNickNameProfile() { return nickNameProfile; }
 
     public void setNickNameProfile(String nickName) {
-        this.nickNameProfile = nickNameProfile;
+        this.nickNameProfile = nickName;
     }
 
     public String getAddressProfile() {
         return addressProfile;
     }
 
-    public void setAddressProfile(String address) {
+    public void setAddressProfile(String addressProfile) {
         this.addressProfile = addressProfile;
     }
 
@@ -70,7 +70,7 @@ public class Profiles {
         return birthdayProfile;
     }
 
-    public void setBirthdayProfile(String birthday) {
+    public void setBirthdayProfile(String birthdayProfile) {
         this.birthdayProfile = birthdayProfile;
     }
 
@@ -79,7 +79,7 @@ public class Profiles {
     }
 
     public void setImg(int image) {
-        this.imageProfile = imageProfile;
+        this.imageProfile = image;
     }
 
 }

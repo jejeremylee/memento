@@ -21,6 +21,7 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHo
 
     public ProfilesAdapter(List<Profiles> list) {
         this.list = list;
+        notifyDataSetChanged();
     }
 
     public void setListener(OnItemClickListener listener) {
@@ -41,7 +42,7 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.binding.name.setText(list.get(position).getNamaProfile());
+        holder.binding.name.setText(list.get(position).getNameProfile());
         holder.binding.nickname.setText(list.get(position).getNickNameProfile());
         holder.binding.image.setImageResource(list.get(position).getImg());
     }

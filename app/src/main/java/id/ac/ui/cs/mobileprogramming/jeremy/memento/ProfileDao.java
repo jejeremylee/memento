@@ -1,5 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -11,8 +12,11 @@ import java.util.List;
 @Dao
 public interface ProfileDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    long insertProfile(Profiles profile);
+    void insertProfile(Profiles profile);
 
-    @Query("SELECT * FROM profiles")
-    List<Profiles> selectAllProfiles();
+    @Query("SELECT * FROM Profiles")
+    List<Profiles> getAllProfiles();
+
+    @Query("SELECT COUNT(*) FROM Profiles")
+    int rowCount();
 }
