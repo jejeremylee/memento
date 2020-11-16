@@ -28,9 +28,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/nameText"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
+                android:hint="@string/nameText"
                 />
 
             <EditText
@@ -41,9 +41,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/nicknameText"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:hint="@string/nicknameText"/>
 
 
             <EditText
@@ -54,10 +54,10 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/phoneText"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:hint="@string/phoneFormText"/>
 
 
 
@@ -69,10 +69,10 @@
                 android:layout_marginRight="25dp"
                 android:gravity="start"
                 android:layout_marginTop="10dp"
-                android:text="@string/birthdayText"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:inputType="date"/>
+                android:inputType="date"
+                android:hint="@string/birthdayFormText"/>
 
 
             <EditText
@@ -83,14 +83,14 @@
                 android:layout_marginRight="25dp"
                 android:gravity="start"
                 android:layout_marginTop="10dp"
-                android:text="@string/addressText"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:inputType="textMultiLine"
+                android:hint="@string/addressText"
                 />
 
         <Button
-            android:id="@+id/button_id"
+            android:id="@+id/save_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"

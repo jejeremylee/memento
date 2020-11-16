@@ -14,7 +14,8 @@
     <string name="nicknameText">Nickname</string>
     <string name="name_template">John Doe</string>
     <string name="nickname_template">John D</string>
-
+    <string name="birthdayFormText">Birthday (DD/MM/YYYY)</string>
+    <string name="phoneFormText">Phone Number (e.g. 08xxxxxxxxx)</string>
     <string name="save">SAVE</string>
 
 </resources>
