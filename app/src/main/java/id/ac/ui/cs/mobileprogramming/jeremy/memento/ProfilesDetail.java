@@ -1,5 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -39,7 +40,7 @@ public class ProfilesDetail extends Fragment {
             binding.phone.setText(item.getPhoneProfile());
             binding.birthday.setText(item.getBirthdayProfile());
             binding.address.setText(item.getAddressProfile());
-//            binding.image.setImageResource(item.getImg());
+            binding.image.setImageBitmap(BitmapFactory.decodeFile(item.getImg()));
         });
     }
 }

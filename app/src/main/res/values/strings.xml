@@ -17,5 +17,7 @@
     <string name="birthdayFormText">Birthday (DD/MM/YYYY)</string>
     <string name="phoneFormText">Phone Number (e.g. 08xxxxxxxxx)</string>
     <string name="save">SAVE</string>
+    <string name="getImg">Select image from phone storage</string>
+
 
 </resources>

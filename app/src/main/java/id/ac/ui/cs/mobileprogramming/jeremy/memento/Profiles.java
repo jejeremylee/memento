@@ -26,7 +26,7 @@ public class Profiles {
     public String addressProfile;
 
     @ColumnInfo(name = "imageProfile")
-    public int imageProfile;
+    public String imageProfile;
 
     public int getProfileId() {
         return profileId;
@@ -74,11 +74,11 @@ public class Profiles {
         this.birthdayProfile = birthdayProfile;
     }
 
-    public int getImg() {
+    public String getImg() {
         return imageProfile;
     }
 
-    public void setImg(int image) {
+    public void setImg(String image) {
         this.imageProfile = image;
     }
 

@@ -1,5 +1,6 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +47,7 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ViewHo
         holder.binding.name.setText(list.get(position).getNameProfile());
         holder.binding.nickname.setText(list.get(position).getNickNameProfile());
         //Log.d("HELLO",Integer.toString(list.get(position).getImg()));
-        //holder.binding.image.setImageResource(list.get(position).getImg());
+        holder.binding.image.setImageBitmap(BitmapFactory.decodeFile(list.get(position).getImg()));
     }
 
     @Override
