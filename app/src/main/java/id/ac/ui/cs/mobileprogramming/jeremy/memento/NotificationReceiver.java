@@ -23,6 +23,8 @@ public class NotificationReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d("MyAPP", "onReceive() called");
+        Intent i = new Intent(context.getApplicationContext(), NotificationService.class);
+        context.getApplicationContext().startService(i);
         MyNotification(context);
     }
     @RequiresApi(api = Build.VERSION_CODES.O)

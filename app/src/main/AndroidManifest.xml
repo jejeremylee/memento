@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <receiver android:name=".NotificationReceiver"></receiver>
+        <service  android:name=".NotificationService" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
