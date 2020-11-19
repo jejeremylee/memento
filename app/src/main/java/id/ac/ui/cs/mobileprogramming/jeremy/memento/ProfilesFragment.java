@@ -1,8 +1,7 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import androidx.databinding.DataBindingUtil;
@@ -24,7 +22,6 @@ import android.view.ViewGroup;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 

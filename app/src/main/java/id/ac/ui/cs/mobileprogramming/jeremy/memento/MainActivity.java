@@ -2,6 +2,7 @@ package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(getApplicationContext(), NotificationReceiver.class);
-        sendBroadcast(intent);
+
         AppDatabase db = AppDatabase.getInstance(getApplication());
         populateAsync(db);
+
+        Intent i = new Intent(getApplicationContext(), NotificationService.class);
+        startService(i);
 
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.main, profilesFragment)

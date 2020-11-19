@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">memento</string>
+    <string name="phoneText">No Telepon</string>
+    <string name="birthdayText">Tanggal Lahir</string>
+    <string name="addressText">Alamat</string>
+    <string name="nameText">Nama</string>
+    <string name="nicknameText">Nama panggilan</string>
+    <string name="birthdayFormText">Tanggal Lahir (DD/MM/YYYY)</string>
+    <string name="phoneFormText">No Telepon (cth. 08xxxxxxx)</string>
+    <string name="save">SIMPAN</string>
+    <string name="getImg">Pilih gambar dari penyimpanan</string>
+</resources>
