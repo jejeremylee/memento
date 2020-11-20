@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimary">#363434</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="niceBlue">#cceabb</color>
+    <color name="niceCream">#fdcb9e</color>
+    <color name="niceGrey">#121212</color>
+    <color name="niceLightBlue">#62929a</color>
+    <color name="niceTelorAsin">#7ec0e4</color>
+    <color name="niceOrange">#ffb347</color>
+    <color name="anotherNiceGrey">#272727</color>
+
 </resources>

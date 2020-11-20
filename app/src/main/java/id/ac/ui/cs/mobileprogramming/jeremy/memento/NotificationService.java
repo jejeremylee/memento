@@ -16,7 +16,7 @@ import java.util.TimeZone;
 
 public class NotificationService extends Service {
 
-    //List<Profiles> profiles;
+
     @Override
     public IBinder onBind(Intent arg0) {
         return null;
@@ -46,7 +46,7 @@ public class NotificationService extends Service {
         PendingIntent MyPendIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, MyIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         AlarmManager MyAlarm = (AlarmManager) getSystemService(ALARM_SERVICE);
-        MyAlarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_DAY, MyPendIntent);
+        MyAlarm.setInexactRepeating(AlarmManager.RTC_WAKEUP,updateTime.getTimeInMillis(), AlarmManager.INTERVAL_DAY, MyPendIntent);
 
     }
 
