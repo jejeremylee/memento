@@ -11,6 +11,7 @@ import android.os.IBinder;
 import android.util.Log;
 
 import java.util.Calendar;
+import java.util.TimeZone;
 
 
 public class NotificationService extends Service {
@@ -36,11 +37,16 @@ public class NotificationService extends Service {
 
     private void scheduleNotification () {
 
+        Calendar updateTime = Calendar.getInstance();
+        updateTime.setTimeZone(TimeZone.getTimeZone("GMT"));
+        updateTime.set(Calendar.HOUR_OF_DAY, 11);
+        updateTime.set(Calendar.MINUTE, 0);
+
         Intent MyIntent = new Intent(getApplicationContext(), NotificationReceiver.class);
         PendingIntent MyPendIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, MyIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         AlarmManager MyAlarm = (AlarmManager) getSystemService(ALARM_SERVICE);
-        MyAlarm.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_DAY, MyPendIntent);
+        MyAlarm.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_DAY, MyPendIntent);
 
     }
 

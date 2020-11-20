@@ -27,6 +27,8 @@ public class NotificationReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         Log.d("MyAPP", "onReceive() called");
+
+
         MyNotification(context);
     }
 

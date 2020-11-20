@@ -10,4 +10,12 @@
     <string name="phoneFormText">No Telepon (cth. 08xxxxxxx)</string>
     <string name="save">SIMPAN</string>
     <string name="getImg">Pilih gambar dari penyimpanan</string>
+    <string name="name_template">John Doe</string>
+    <string name="nickname_template">John D</string>
+    <string name="address_template">
+       Jl. Kemurnian blok A12 No 3, Jakarta Pusat
+    </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phone_template">081256789934</string>
+    <string name="birthday_template">DD-MM-YYYY</string>
 </resources>
