@@ -16,7 +16,4 @@ public interface ProfileDao {
 
     @Query("SELECT * FROM Profiles")
     List<Profiles> getAllProfiles();
-
-    @Query("SELECT COUNT(*) FROM Profiles")
-    int rowCount();
 }
