@@ -17,7 +17,13 @@
     <string name="birthdayFormText">Birthday (DD/MM/YYYY)</string>
     <string name="phoneFormText">Phone Number (e.g. (451) 555 - 2671)</string>
     <string name="save">SAVE</string>
+    <string name="deny">CLOSE</string>
+    <string name="allow">ASK PERMISSION</string>
     <string name="getImg">Select image from phone storage</string>
+    <string name="descHeader">Why we need your permission?</string>
+    <string name="descriptionPermission">We need your permission so that we can access your file and media storage. This permission will allow us to <b> read/access your file and media data and also write/modify it </b>. We will use this permission to get image/photo from your media and save/use it for your profile display pictures.
+         \n \nFile and media data will be saved at our Room Persistence Library (local database for memento) and <b> wont be used against your privacy.</b>
+    </string>
 
 
 </resources>

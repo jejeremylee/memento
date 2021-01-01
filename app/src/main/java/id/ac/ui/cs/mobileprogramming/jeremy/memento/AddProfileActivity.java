@@ -1,6 +1,7 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -16,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.ViewModelProvider;
@@ -43,15 +46,15 @@ public class AddProfileActivity extends AppCompatActivity {
         ImageView getImage = findViewById(R.id.addImage);
         getImage.setOnClickListener(arg0 -> {
             try {
-                if (ActivityCompat.checkSelfPermission(AddProfileActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(AddProfileActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, RESULT_LOAD_IMAGE);
-                } else {
+                if(ActivityCompat.checkSelfPermission(AddProfileActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
                     Intent i = new Intent(
                             Intent.ACTION_PICK,
                             android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
                     startActivityForResult(i, RESULT_LOAD_IMAGE);
                 }
+                else {
+                    storagePermissionReq();
+                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -77,6 +80,28 @@ public class AddProfileActivity extends AppCompatActivity {
         });
     }
 
+    private void storagePermissionReq() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            startActivity(new Intent(getApplicationContext(), PermissionActivity.class));
+        }
+        else{
+            ActivityCompat.requestPermissions(AddProfileActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, RESULT_LOAD_IMAGE);
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == RESULT_LOAD_IMAGE )  {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permission denied ", Toast.LENGTH_SHORT).show();
+                }
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -100,4 +125,5 @@ public class AddProfileActivity extends AppCompatActivity {
 
         }
     }
+
 }

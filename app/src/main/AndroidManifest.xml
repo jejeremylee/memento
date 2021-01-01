@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddProfileActivity"></activity>
+        <activity android:name=".PermissionActivity"></activity>
     </application>
 
 </manifest>

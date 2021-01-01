@@ -9,6 +9,8 @@
     <string name="birthdayFormText">Tanggal Lahir (DD/MM/YYYY)</string>
     <string name="phoneFormText">No Telepon (cth. 08xxxxxxx)</string>
     <string name="save">SIMPAN</string>
+    <string name="deny">TUTUP</string>
+    <string name="allow">MEMINTA AKSES</string>
     <string name="getImg">Pilih gambar dari penyimpanan</string>
     <string name="name_template">John Doe</string>
     <string name="nickname_template">John D</string>
@@ -18,4 +20,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="phone_template">081256789934</string>
     <string name="birthday_template">DD-MM-YYYY</string>
+    <string name="descHeader">Kenapa kamu butuh izin anda?</string>
+    <string name="descriptionPermission">Kami membutuhkan izin anda agar kami dapat mengakses penyimpanan file dan media pada device anda. \n
+        \n \nIzin ini akan memperbolehkan kami <b> mengakses dan juga memodifikasi data pada penyimpanan file dan media anda </b>. Kami akan menggunakan izin ini untuk mengambil gambar/foto dari penyimpanan media anda dan juga menyimpan/menggunakannya
+        untuk display pictures pada profil-profil yang sudah anda tambahkan pada aplikasi ini.
+        \n \nData file dan juga media akan kami simpan dalam Room Persistence Library (database lokal dari aplikasi memento) dan <b>
+        tidak akan digunakan untuk melanggar privasi anda.
+    </b>
+    </string>
 </resources>
