@@ -22,18 +22,21 @@ public class Profiles {
     @ColumnInfo(name = "birthdayProfile")
     public String birthdayProfile;
 
+    @ColumnInfo(name = "socmedProfile")
+    public String socmedProfile;
+
     @ColumnInfo(name = "addressProfile")
     public String addressProfile;
 
     @ColumnInfo(name = "imageProfile")
     public String imageProfile;
 
-    public int getProfileId() {
-        return profileId;
+    public String getSocialMediaProfile() {
+        return socmedProfile;
     }
 
-    public void setProfileId(int profileId) {
-        this.profileId = profileId;
+    public void setSocialMediaProfile(String socmedProfile) {
+        this.socmedProfile = socmedProfile;
     }
 
     public String getNameProfile() {

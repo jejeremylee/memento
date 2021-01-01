@@ -2,6 +2,8 @@
     <string name="app_name">memento</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="phoneText">Phone</string>
+    <string name="socmedText">Social Media</string>
+    <string name="socmed_template">https//:instagram.com/helloitsme/</string>
     <string name="phone_template">(451) 555 - 2671</string>
     <string name="birthdayText">Birthday</string>
     <string name="birthday_template">DD-MM-YYYY</string>
@@ -16,6 +18,7 @@
     <string name="nickname_template">John D</string>
     <string name="birthdayFormText">Birthday (DD/MM/YYYY)</string>
     <string name="phoneFormText">Phone Number (e.g. (451) 555 - 2671)</string>
+    <string name="socmedFormText">https//:instagram/hubbyhobby/</string>
     <string name="save">SAVE</string>
     <string name="deny">CLOSE</string>
     <string name="allow">ASK PERMISSION</string>

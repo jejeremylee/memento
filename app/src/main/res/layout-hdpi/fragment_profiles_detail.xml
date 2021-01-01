@@ -2,7 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
    >
-
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -100,6 +104,32 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/socmedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/socmedText"
+                android:textColor="@color/niceOrange"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/socmed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:autoLink="web"
+                android:text="@string/socmed_template"
+                android:textColor="@color/niceOrange"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:orientation="vertical">
+
+            <TextView
                 android:id="@+id/addressText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,4 +150,5 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 </layout>

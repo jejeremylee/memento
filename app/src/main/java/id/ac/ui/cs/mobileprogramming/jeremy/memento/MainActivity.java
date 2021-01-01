@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onStart(){
+
         super.onStart();
         Intent i = new Intent(getApplicationContext(), NotificationService.class);
         startService(i);

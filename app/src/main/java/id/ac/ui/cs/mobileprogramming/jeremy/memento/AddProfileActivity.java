@@ -1,7 +1,7 @@
 package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
 import android.Manifest;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -9,16 +9,15 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.ViewModelProvider;
@@ -30,6 +29,7 @@ public class AddProfileActivity extends AppCompatActivity {
     private EditText phone;
     private EditText birthday;
     private EditText address;
+    private EditText socmed;
     private String picturePath;
     private static int RESULT_LOAD_IMAGE = 1;
 
@@ -41,6 +41,7 @@ public class AddProfileActivity extends AppCompatActivity {
         nickname = findViewById(R.id.nickname);
         phone = findViewById(R.id.phone);
         birthday = findViewById(R.id.birthday);
+        socmed = findViewById(R.id.socmed);
         address = findViewById(R.id.address);
 
         ImageView getImage = findViewById(R.id.addImage);
@@ -68,6 +69,7 @@ public class AddProfileActivity extends AppCompatActivity {
             newProfile.setNickNameProfile(nickname.getText().toString());
             newProfile.setBirthdayProfile(birthday.getText().toString());
             newProfile.setPhoneProfile(phone.getText().toString());
+            newProfile.setSocialMediaProfile(socmed.getText().toString());
             newProfile.setAddressProfile(address.getText().toString());
             newProfile.setImg(picturePath);
 

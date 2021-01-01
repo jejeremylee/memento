@@ -8,6 +8,8 @@
     <string name="nicknameText">Nama panggilan</string>
     <string name="birthdayFormText">Tanggal Lahir (DD/MM/YYYY)</string>
     <string name="phoneFormText">No Telepon (cth. 08xxxxxxx)</string>
+    <string name="socmedText">Sosial Media</string>
+    <string name="socmed_template">https//:instagram.com/helloitsme/</string>
     <string name="save">SIMPAN</string>
     <string name="deny">TUTUP</string>
     <string name="allow">MEMINTA AKSES</string>
@@ -17,6 +19,7 @@
     <string name="address_template">
        Jl. Kemurnian blok A12 No 3, Jakarta Pusat
     </string>
+    <string name="socmedFormText">https//:instagram/hubbyhobby/</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="phone_template">081256789934</string>
     <string name="birthday_template">DD-MM-YYYY</string>

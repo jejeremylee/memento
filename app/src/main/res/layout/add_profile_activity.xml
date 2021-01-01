@@ -98,6 +98,21 @@
                 android:inputType="date"
                 android:hint="@string/birthdayFormText"/>
 
+        <EditText
+            android:id="@+id/socmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/niceOrange"
+            android:textColorHint="@color/niceOrange"
+            android:backgroundTint="@color/niceOrange"
+            android:textSize="20sp"
+            android:inputType="textMultiLine"
+            android:hint="@string/socmedFormText"/>
+
             <EditText
                 android:id="@+id/address"
                 android:layout_width="match_parent"

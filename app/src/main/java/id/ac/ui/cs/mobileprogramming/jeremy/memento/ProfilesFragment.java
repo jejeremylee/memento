@@ -2,7 +2,10 @@ package id.ac.ui.cs.mobileprogramming.jeremy.memento;
 
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +22,7 @@ import id.ac.ui.cs.mobileprogramming.jeremy.memento.databinding.FragmentProfiles
 
 
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -66,14 +70,29 @@ public class ProfilesFragment extends Fragment {
         ProfilesAdapter adapter = new ProfilesAdapter(profiles);
 
 
+
         binding.recyclerView.setAdapter(adapter);
         adapter.setListener((v, position) -> {
-            viewModel.setSelected(adapter.getProfileAt(position));
-            getParentFragmentManager().beginTransaction()
-                    .replace(R.id.main, detailsFragment)
-                    .addToBackStack(null)
-                    .commit();
+            if (isNetworkAvailable()) {
+                viewModel.setSelected(adapter.getProfileAt(position));
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.main, detailsFragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+            else{
+                Toast.makeText(getActivity(), "No internet is available, please connect to internet", Toast.LENGTH_LONG).show();
+            }
         });
+    }
+
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 

@@ -13,7 +13,6 @@ public class PermissionActivity extends AppCompatActivity {
 
     private PermissionDescription permFrag = new PermissionDescription();
 
-    AddProfileActivity ab = new AddProfileActivity();
     private static int RESULT_LOAD_IMAGE = 1;
 
 
