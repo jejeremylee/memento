@@ -9,7 +9,7 @@
     <string name="birthdayFormText">Tanggal Lahir (DD/MM/YYYY)</string>
     <string name="phoneFormText">No Telepon (cth. 08xxxxxxx)</string>
     <string name="socmedText">Sosial Media</string>
-    <string name="socmed_template">https//:instagram.com/helloitsme/</string>
+    <string name="socmed_template">Social Media Profile URL</string>
     <string name="save">SIMPAN</string>
     <string name="deny">TUTUP</string>
     <string name="allow">MEMINTA AKSES</string>

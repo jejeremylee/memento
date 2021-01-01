@@ -18,7 +18,7 @@
     <string name="nickname_template">John D</string>
     <string name="birthdayFormText">Birthday (DD/MM/YYYY)</string>
     <string name="phoneFormText">Phone Number (e.g. (451) 555 - 2671)</string>
-    <string name="socmedFormText">https//:instagram/hubbyhobby/</string>
+    <string name="socmedFormText">Social Media Profile URL</string>
     <string name="save">SAVE</string>
     <string name="deny">CLOSE</string>
     <string name="allow">ASK PERMISSION</string>
