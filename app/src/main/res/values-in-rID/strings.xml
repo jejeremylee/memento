@@ -31,4 +31,8 @@
         tidak akan digunakan untuk melanggar privasi anda.
     </b>
     </string>
+
+    <string name="creditButton">Credit</string>
+    <string name="madeBy">developed with joy and tears (mostly tears) by jeremy</string>
+    <string name="mementoTitle">memento</string>
 </resources>

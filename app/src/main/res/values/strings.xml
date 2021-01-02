@@ -28,5 +28,9 @@
          \n \nFile and media data will be saved at our Room Persistence Library (local database for memento) and <b> wont be used against your privacy.</b>
     </string>
 
+    <string name="creditButton">Credit</string>
+    <string name="madeBy">developed with joy and tears (mostly tears) by jeremy</string>
+    <string name="mementoTitle">memento</string>
+
 
 </resources>

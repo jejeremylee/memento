@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.ac.ui.cs.mobileprogramming.jeremy.memento">
 
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+
     <uses-permission android:name = "android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -32,6 +36,7 @@
         </activity>
         <activity android:name=".AddProfileActivity"></activity>
         <activity android:name=".PermissionActivity"></activity>
+        <activity android:name=".CreditActivity"></activity>
     </application>
 
 </manifest>

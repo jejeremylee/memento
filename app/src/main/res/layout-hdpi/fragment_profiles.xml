@@ -29,6 +29,19 @@
         app:fabSize="normal"
         app:srcCompat="@drawable/add_black" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/credit_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/niceOrange"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="@string/creditButton">
+    </Button>
+
 </RelativeLayout>
 
 </layout>

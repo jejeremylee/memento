@@ -22,6 +22,7 @@ import id.ac.ui.cs.mobileprogramming.jeremy.memento.databinding.FragmentProfiles
 
 
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -46,6 +47,16 @@ public class ProfilesFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profiles, container, false);
+
+        Button creditButton = binding.getRoot().findViewById(R.id.credit_button);
+
+        creditButton.bringToFront();
+
+        creditButton.setOnClickListener(view -> {
+            Toast.makeText(getActivity(), "FLASH AND DISCO WARNING!!!", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getActivity().getApplicationContext(), CreditActivity.class));
+        });
+
         FloatingActionButton addButton = binding.getRoot().findViewById(R.id.addProfile);
         addButton.bringToFront();
         addButton.setOnClickListener(view -> {
